@@ -12,7 +12,6 @@ describe PushPin do
 
   it "can get Pintrest Pin URLs" do
     a = PushPin::Scraper.new("http://pinterest.com/lorgio/testboard/")
-    a.scrape
     expect(a.pintrest_pin_urls).to eq(["/pin/45669383693985036/"])
   end
 

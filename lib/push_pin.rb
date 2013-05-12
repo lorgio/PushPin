@@ -16,6 +16,7 @@ module PushPin
     end
 
     def pintrest_pin_urls
+      self.scrape if @page.nil?
       pinterest_links = @page.links.select{|link| link if link.href.match(/\/pin\/.*/)}
       pinterest_links.collect(&:href)
     end
